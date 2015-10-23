@@ -1,0 +1,27 @@
+nav {
+	box-shadow: -3px -3px 3px 0 rgba(0,0,0,0.19) , 3px 0 3px 0 rgba(0,0,0,0.19) , 0 3px 3px 0 rgba(0,0,0,0.23);
+	position: fixed;
+	width: 100%;
+	z-index:1;
+	background: #fff;
+	.row {
+		&.full-width {
+			ul {
+				list-style: none;
+				text-align:center;
+				li {
+					display: inline;
+				}
+			}
+			border-bottom: 1px solid rgba(0,0,0,0.2);
+		}
+		&.items {
+			.medium-3 {
+				border-left: 1px solid rgba(0,0,0,0.2);
+			}
+			&:nth-last-child(1) {
+				border-right: 1px solid rgba(0,0,0,0.2);
+			}
+		}
+	}
+}

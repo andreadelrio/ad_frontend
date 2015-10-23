@@ -1,0 +1,57 @@
+#banner {
+	.row {
+		.banner {
+			padding: 100px 0 0 0;
+		}
+	}
+}
+
+#list {
+	padding-top: 3em;
+	ul li {
+		div {
+			padding: 7px;
+			border: 2px solid $primary-color;
+			box-sizing: border-box;
+			height: 100px;
+			position:relative;
+			&:hover {
+				padding-top: 3px;
+				border: 6px solid $primary-color;
+				.plus {
+					visibility: visible;
+				}
+			}
+			.plus {
+				cursor: pointer;
+				border-radius: 50%;
+				border: 2px solid $secondary-color;
+				color: $secondary-color;
+				background: #fff;
+				position: absolute;
+				bottom: -1em;
+    		margin-left: auto;
+    		margin-right: auto;
+    		left: 0;
+    		right: 0;
+    		visibility: hidden;
+    		width: 28px;
+    		height: 28px;
+    		span {
+  		    margin-top: -7px !important;
+  		    position: absolute;
+  		    margin-left: auto;
+  		    margin-right: auto;
+  		    left: 0;
+  		    right: 0;
+  		    font-size: 1.4em;
+  		    font-weight: bold;
+    		}
+			}
+		}
+	}
+	.details-box {
+		border: 1px solid black;
+		margin-bottom: 1.5em;
+	}
+}
