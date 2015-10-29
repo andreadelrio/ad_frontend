@@ -6,10 +6,10 @@
 	}
 }
 
-#list {
+#grid {
 	padding-top: 3em;
-	ul li {
-		div {
+	ul.fpi-row li {
+		>div {
 			padding: 7px;
 			border: 2px solid $primary-color;
 			box-sizing: border-box;
@@ -18,16 +18,13 @@
 			&:hover {
 				padding-top: 3px;
 				border: 6px solid $primary-color;
-				.plus {
+				.ion-plus-circled {
 					visibility: visible;
 				}
 			}
-			.plus {
+			.ion-plus-circled {
 				cursor: pointer;
-				border-radius: 50%;
-				border: 2px solid $secondary-color;
 				color: $secondary-color;
-				background: #fff;
 				position: absolute;
 				bottom: -1em;
     		margin-left: auto;
@@ -35,23 +32,32 @@
     		left: 0;
     		right: 0;
     		visibility: hidden;
-    		width: 28px;
-    		height: 28px;
-    		span {
-  		    margin-top: -7px !important;
-  		    position: absolute;
-  		    margin-left: auto;
-  		    margin-right: auto;
-  		    left: 0;
-  		    right: 0;
-  		    font-size: 1.4em;
-  		    font-weight: bold;
+    		&:before {
+    			border-radius: 50%;
+    			background: #fff;
     		}
 			}
 		}
 	}
 	.details-box {
-		border: 1px solid black;
+		border: 2px solid $primary-color;
 		margin-bottom: 1.5em;
+		height: 300px;
+		background: lighten($primary-color, 22%);
+		.ion-close-circled {
+			color: $primary-color;
+			cursor: pointer;
+		}
+		.row .full-text {
+			background: #fff;
+			height: 250px;
+			text-align: justify;
+			transform-style: preserve-3d;
+			h5 {
+				position: relative;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
 	}
 }

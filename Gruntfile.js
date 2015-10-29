@@ -12,9 +12,35 @@ module.exports = function(grunt) {
           sourceMap: true,
         },
         files: {
-          'css/app.css': 'scss/app.scss'
+          'css/unprefixed.app.css': 'scss/app.scss'
         }
       }
+    },
+
+    /* Autoprefixer - Adds vendor prefixes automatically
+     * https://github.com/nDmitry/grunt-autoprefixer */
+    autoprefixer: {
+      options: {
+        browsers: [
+          'last 2 version',
+          'safari 6',
+          'ie 9',
+          'opera 12.1',
+          'ios 6',
+          'android 4'
+        ]
+      },
+      dev: {
+        files: {
+          'css/app.css': 'css/unprefixed.app.css'
+          // '<%= project.assets %>/css/style.min.css': ['<%= project.assets %>/css/style.unprefixed.css']
+        }
+      },
+      // dist: {
+      //   files: {
+      //     '<%= project.assets %>/css/style.prefixed.css': ['<%= project.assets %>/css/style.unprefixed.css']
+      //   }
+      // }
     },
 
     watch: {
@@ -27,14 +53,14 @@ module.exports = function(grunt) {
 
       sass: {
         files: 'scss/**/*.scss',
-        tasks: ['sass']
+        tasks: ['sass','autoprefixer:dev']
       }
     }
   });
 
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
-
+  grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.registerTask('build', ['sass']);
   grunt.registerTask('default', ['build','watch']);
 }
