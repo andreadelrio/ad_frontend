@@ -21,10 +21,10 @@ $(document).foundation();
 // });
 
 $(".fpi-ul li").click(function(e){
-	
+
 	$('.fpi-row').removeClass('down');
 	$(".details-box").removeClass('open');
-	$('.details-box div').addClass('hidden');
+	$('.details-box .detail-box').addClass('hidden');
 	$('[data-fpi-details=' + $(this).data("fpi-num") + ']').toggleClass("hidden");	
 
 	if(!$(this).parents('.fpi-row').siblings('.fpi-row').hasClass('down')) {
