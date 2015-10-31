@@ -8,15 +8,18 @@
 
 #grid {
 	padding-top: 3em;
+	height: 1000px;
 	.fpi-row {
 		position:relative;
 		z-index:2;
 		transition: transform .54s cubic-bezier(.5,0,.1,1) 0s;
 		&.down {
 			transform: translate3d(0,200px,0);	
+			z-index:1;
 		}
 		ul.fpi-ul li {
 			>div {
+				background: skyblue;
 				padding: 7px;
 				border: 2px solid $primary-color;
 				box-sizing: border-box;

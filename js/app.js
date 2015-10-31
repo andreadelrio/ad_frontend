@@ -21,17 +21,21 @@ $(document).foundation();
 // });
 
 $(".fpi-ul li").click(function(e){
+	
+	$('.fpi-row').removeClass('down');
+	$(".details-box").removeClass('open');
 	$('.details-box div').addClass('hidden');
 	$('[data-fpi-details=' + $(this).data("fpi-num") + ']').toggleClass("hidden");	
+
+	if(!$(this).parents('.fpi-row').siblings('.fpi-row').hasClass('down')) {
+		$(this).parents('.fpi-row').siblings('.fpi-row').toggleClass('down');
+		$(this).parents('.fpi-row').prevAll('.fpi-row').removeClass('down');
+	};
+
 	if(!$(this).parent().siblings('.details-box').hasClass('open')) {
 		$(this).parent().siblings('.details-box').toggleClass('open');
 	};
-	if($(this).parents('.fpi-row').siblings('.fpi-row').hasClass('down')) {
-		console.log('what to do');
-	} else {
-		$(this).parents('.fpi-row').siblings('.fpi-row').toggleClass('down');
-		$('.fpi-row.first').removeClass('down');
-	};
+
 	return false;
 	e.preventDefault();
 });
