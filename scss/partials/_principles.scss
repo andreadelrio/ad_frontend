@@ -8,34 +8,55 @@
 
 #grid {
 	padding-top: 3em;
-	ul.fpi-row li {
-		>div {
-			padding: 7px;
-			border: 2px solid $primary-color;
-			box-sizing: border-box;
-			height: 100px;
-			position:relative;
-			&:hover {
-				padding-top: 3px;
-				border: 6px solid $primary-color;
+	.fpi-row {
+		position:relative;
+		z-index:2;
+		transition: transform .54s cubic-bezier(.5,0,.1,1) 0s;
+		&.down {
+			transform: translate3d(0,200px,0);	
+		}
+		ul.fpi-ul li {
+			>div {
+				padding: 7px;
+				border: 2px solid $primary-color;
+				box-sizing: border-box;
+				height: 200px;
+				&:hover {
+					padding-top: 3px;
+					border: 6px solid $primary-color;
+					.ion-plus-circled {
+						visibility: visible;
+					}
+				}
 				.ion-plus-circled {
-					visibility: visible;
+					cursor: pointer;
+					color: $secondary-color;
+					position: absolute;
+					bottom: -1em;
+	    		margin-left: auto;
+	    		margin-right: auto;
+	    		left: 0;
+	    		right: 0;
+	    		visibility: hidden;
+	    		&:before {
+	    			border-radius: 50%;
+	    			background: #fff;
+	    		}
 				}
 			}
-			.ion-plus-circled {
-				cursor: pointer;
-				color: $secondary-color;
-				position: absolute;
-				bottom: -1em;
-    		margin-left: auto;
-    		margin-right: auto;
-    		left: 0;
-    		right: 0;
-    		visibility: hidden;
-    		&:before {
-    			border-radius: 50%;
-    			background: #fff;
-    		}
+		}
+		.details-box {
+			position: absolute;
+			height: 200px;
+			background: yellow;
+			width: 100%;
+			top: 200px;
+			opacity: 0;
+			// z-index:2;
+			// transition: opacity 400ms cubic-bezier(.5,0,.1,1) 0s;
+			// transition: opacity .1s cubic-bezier(.5,0,.1,1) .1s;
+			&.open {
+				opacity: 1;
 			}
 		}
 	}
