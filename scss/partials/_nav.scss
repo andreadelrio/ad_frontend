@@ -28,14 +28,39 @@ nav {
 
 //menu
 #menu {
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		li {
+			.wrapper {
+				display: inline-block;
+				position: relative;
+		    top: 24%;
+		    transform: translateY(-50%);
+			}
+			display: inline-block !important;
+			&.cta {
+				height: 42px;
+				border: 2px solid $secondary-color;
+		  	border-radius: 5px;
+		  	position: relative;
+		  	margin: 0 7px;
+		  	i {
+		  		padding-left: 3px;
+		  	}
+			}
+		}
+	}
 	select {
+		width: 100px;
 		height: 42px;
 	  -webkit-appearance: none;
 	  -moz-appearance: none;
 	  appearance: none;
 	  text-indent: 1px;
-	  border: 2px solid $secondary-color;
-	  border-radius: 5px;
+	  border: none;
 	  background: url(https://s3.amazonaws.com/viasam/select_drop_dark.png) no-repeat right;
 	  outline: none;
 	  text-overflow: '';
@@ -43,15 +68,5 @@ nav {
 	  &:hover {
 	    cursor: pointer;
 	  }
-	}
-	// .small-4 {
-	// 	padding: 0 7px;
-	// }
-	.cta {
-		border: 2px solid $secondary-color;
-  	border-radius: 5px;
-  	i {
-  		padding-left: 3px;
-  	}
 	}
 }

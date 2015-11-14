@@ -22,6 +22,10 @@
   color: white;
 }
 
+.relative {
+  position: relative;
+}
+
 // Custom type
 .h5 {
   font-size: $h5-font-size;
@@ -115,6 +119,15 @@
   .php-#{$q} {
     padding-left: $q + %; 
     padding-right: $q + %; 
+  }
+}
+
+@for $q from 1 to 5 {
+  .ph-#{$q*7} {
+    padding-left: remify($q*7)!important;
+    padding-left: ($q*7) + px !important;
+    padding-right: remify($q*7)!important;
+    padding-right: ($q*7) + px !important;
   }
 }
 
