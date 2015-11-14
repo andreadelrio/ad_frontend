@@ -25,7 +25,7 @@ $(".fpi-ul li").click(function(e){
 	$('.fpi-row').removeClass('down');
 	$(".details-box").removeClass('open');
 	$('.details-box .detail-box').addClass('hidden');
-	$('[data-fpi-details=' + $(this).data("fpi-num") + ']').toggleClass("hidden");	
+	$('[data-fpi-details=' + $(this).data("fpi-num") + ']').removeClass("hidden");	
 
 	if(!$(this).parents('.fpi-row').siblings('.fpi-row').hasClass('down')) {
 		$(this).parents('.fpi-row').siblings('.fpi-row').toggleClass('down');
@@ -38,4 +38,11 @@ $(".fpi-ul li").click(function(e){
 
 	return false;
 	e.preventDefault();
+});
+
+$("#toggle").click(function(){
+	$("#grid").toggleClass("hidden");
+	$(this).toggleClass("ion-navicon-round");
+	$(this).toggleClass("ion-android-apps");
+	$("#list").toggleClass("hidden");
 });

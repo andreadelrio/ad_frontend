@@ -25,3 +25,33 @@ nav {
 		}
 	}
 }
+
+//menu
+#menu {
+	select {
+		height: 42px;
+	  -webkit-appearance: none;
+	  -moz-appearance: none;
+	  appearance: none;
+	  text-indent: 1px;
+	  border: 2px solid $secondary-color;
+	  border-radius: 5px;
+	  background: url(https://s3.amazonaws.com/viasam/select_drop_dark.png) no-repeat right;
+	  outline: none;
+	  text-overflow: '';
+	  font-size: 1rem;
+	  &:hover {
+	    cursor: pointer;
+	  }
+	}
+	// .small-4 {
+	// 	padding: 0 7px;
+	// }
+	.cta {
+		border: 2px solid $secondary-color;
+  	border-radius: 5px;
+  	i {
+  		padding-left: 3px;
+  	}
+	}
+}

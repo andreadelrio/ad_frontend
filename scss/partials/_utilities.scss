@@ -63,8 +63,8 @@
 
 @for $l from -7 to 11 {
   .mr-#{$l*7} {
-    margin-right: remify($l*7);
-    margin-right: ($l*7) + px;
+    margin-right: remify($l*7) !important;
+    margin-right: ($l*7) + px !important;
   }
 }
 
@@ -99,27 +99,74 @@
 
 @for $q from -7 to 11 {
   .p-#{$q*7} {
-    padding: rem($q*7)!important;
+    padding: remify($q*7)!important;
     padding: ($q*7) + px !important;
   }
 }
 
-// icons
-@for $q from 1 to 5 {
-  .x#{$q} {
-    font-size: $q + rem !important;
+@for $q from 2 to 8 {
+  .pvp-#{$q} {
+    padding-top: $q + %; 
+    padding-bottom: $q + %; 
   }
 }
 
-//
-.custom-button-class { 
+@for $q from 2 to 8 {
+  .php-#{$q} {
+    padding-left: $q + %; 
+    padding-right: $q + %; 
+  }
+}
+
+
+// helper functions
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+  
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+  
+  @return $string;
+}
+
+@function to-string($value) {
+  @return inspect($value);
+}
+
+// icons
+@for $q from 1 to 10 {
+  $q-for-class: str-replace(to-string($q*0.5), '.', '-');
+  // @debug ($q-for-class);
+  .x#{$q-for-class} {
+    font-size: $q*0.5 + rem !important;
+  }
+}
+
+// buttons
+.custom-button { 
   @include button;
   border: 2px solid $secondary-color;
   background: #fff;
   color: #000000;
   padding: remify(7) remify(21);
+  margin: 0;
   &:hover {
     background: #fff;
     color: #000000;
+  }
+  &.slim {
+    padding: remify(3) remify(7);
+  }
+  &.sec-color {
+    color: $secondary-color;
+  }
+}
+
+// classes with main colors
+$colors: ("pri-color": $primary-color, "sec-color": $secondary-color);
+@each $color-name, $color-value in $colors {
+  .#{$color-name} {
+    color: $color-value;
   }
 }
