@@ -26,6 +26,10 @@
   position: relative;
 }
 
+.block {
+  display: block;
+}
+
 // Custom type
 .h5 {
   font-size: $h5-font-size;
@@ -47,7 +51,7 @@
 @for $i from -7 to 11 {
   .mt-#{$i*7} {
     margin-top: ($i*7) + px !important;
-    margin-top: remify($i*7)!important;
+    margin-top: rem-calc($i*7)!important;
   }
 }
 
@@ -67,7 +71,7 @@
 
 @for $l from -7 to 11 {
   .mr-#{$l*7} {
-    margin-right: remify($l*7) !important;
+    margin-right: rem-calc($l*7) !important;
     margin-right: ($l*7) + px !important;
   }
 }
@@ -75,35 +79,35 @@
 // Paddings
 @for $m from -7 to 11 {
   .pt-#{$m*7} {
-    padding-top: remify($m*7);
+    padding-top: rem-calc($m*7);
     padding-top: ($m*7) + px;
   }
 }
 
 @for $n from -7 to 11 {
   .pb-#{$n*7} {
-    padding-bottom: remify($n*7);
+    padding-bottom: rem-calc($n*7);
     padding-bottom: ($n*7) + px;
   }
 }
 
 @for $o from -7 to 11 {
   .pl-#{$o*7} {
-    padding-left: remify($o*7);
+    padding-left: rem-calc($o*7);
     padding-left: ($o*7) + px;
   }
 }
 
 @for $p from -7 to 11 {
   .pr-#{$p*7} {
-    padding-right: remify($p*7)!important;
+    padding-right: rem-calc($p*7)!important;
     padding-right: ($p*7) + px !important;
   }
 }
 
 @for $q from -7 to 11 {
   .p-#{$q*7} {
-    padding: remify($q*7)!important;
+    padding: rem-calc($q*7)!important;
     padding: ($q*7) + px !important;
   }
 }
@@ -124,10 +128,28 @@
 
 @for $q from 1 to 5 {
   .ph-#{$q*7} {
-    padding-left: remify($q*7)!important;
+    padding-left: rem-calc($q*7)!important;
     padding-left: ($q*7) + px !important;
-    padding-right: remify($q*7)!important;
+    padding-right: rem-calc($q*7)!important;
     padding-right: ($q*7) + px !important;
+  }
+}
+
+@for $q from 1 to 5 {
+  .mh-#{$q*7} {
+    margin-left: ($q*7) + px !important;
+    margin-left: rem-calc($q*7)!important;
+    margin-right: ($q*7) + px !important;
+    margin-right: rem-calc($q*7)!important;
+  }
+}
+
+@for $q from 1 to 5 {
+  .pv-#{$q*7} {
+    padding-top: rem-calc($q*7)!important;
+    padding-top: ($q*7) + px !important;
+    padding-bottom: rem-calc($q*7)!important;
+    padding-bottom: ($q*7) + px !important;
   }
 }
 
@@ -162,14 +184,14 @@
   border: 2px solid $secondary-color;
   background: #fff;
   color: #000000;
-  padding: remify(7) remify(21);
+  padding: rem-calc(7) rem-calc(21);
   margin: 0;
   &:hover {
     background: #fff;
     color: #000000;
   }
   &.slim {
-    padding: remify(3) remify(7);
+    padding: rem-calc(3) rem-calc(7);
   }
   &.sec-color {
     color: $secondary-color;
