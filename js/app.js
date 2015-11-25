@@ -19,31 +19,36 @@ $(document).foundation();
   var mobileMenu = $('.mobile-menu');
 	if ($(window).width() <= 736) {
   	mobileTrigger.click(function(){
+			console.log("click");
   		mobileMenu.toggleClass("active");
 	    body.toggleClass("mobile-menu-active");
 	    if (mobileMenu.hasClass("active")) {
 	    	nav.css("height", $(window).height());
 	    } else {
-	    	nav.css("height", 49);
+	    	nav.css("height", "");
 	    };
-	    // if (nav.height() == 49) {
-	    // } else {
-	    // }
   	});
 	};
 
-	//resize social icons on window resize
+	//window resize
 	$(window).resize(function () {
-	  if ($(window).width() <= 736) {
-	    myStickerHeight =  (myPic.height() - skillsList.height()) / 2
-	  }
-	  else {
-	    myStickerHeight =  ((myPic.height() - mySocial.height()) / 2) + 8
-	  }
-	  var myStickers = $('.sticker');
-	  myStickers.each(function(index, item){
-	    $(this).css("height", myStickerHeight);
-	  });
+		console.log('resized');
+		if ($(window).width() <= 736) {
+	  	mobileTrigger.click(function(){
+				console.log("click inside resize");
+	  		mobileMenu.toggleClass("active");
+		    body.toggleClass("mobile-menu-active");
+		    if (mobileMenu.hasClass("active")) {
+		    	nav.css("height", $(window).height());
+		    } else {
+		    	nav.css("height", "");
+		    };
+	  	});
+		} else {
+			mobileMenu.removeClass("active");
+		  body.removeClass("mobile-menu-active");
+		  nav.css("height", "");
+		};
 	});
 	//
 

@@ -1,5 +1,6 @@
 nav {
 	box-shadow: -3px -3px 3px 0 rgba(0,0,0,0.19) , 3px 0 3px 0 rgba(0,0,0,0.19) , 0 3px 3px 0 rgba(0,0,0,0.23);
+	transition: height .15s cubic-bezier(.33,.66,.66,1);
 	position: fixed;
 	width: 100%;
 	z-index:3;
@@ -33,12 +34,14 @@ nav {
 	.mobile-menu {
 		height: 0;
 		overflow: hidden;
+		ul li {
+			// border-top: 1px solid rgba(0,0,0,0.2);
+	    border-bottom: 1px solid rgba(0,0,0,0.2);
+	    border-right: 1px solid rgba(0,0,0,0.2);
+	    padding: rem-calc(21) rem-calc(7);
+		}
 		&.active {
 			height: 100%;
-		}
-		background: red;
-		#mobile-trigger {
-
 		}
 	}
 }
