@@ -79,36 +79,43 @@
 // Paddings
 @for $m from -7 to 11 {
   .pt-#{$m*7} {
-    padding-top: rem-calc($m*7);
     padding-top: ($m*7) + px;
+    padding-top: rem-calc($m*7);
+  }
+}
+
+@for $m from 1 to 6 {
+  .pt-#{$m} {
+    padding-top: ($m) + px;
+    padding-top: rem-calc($m);
   }
 }
 
 @for $n from -7 to 11 {
   .pb-#{$n*7} {
-    padding-bottom: rem-calc($n*7);
     padding-bottom: ($n*7) + px;
+    padding-bottom: rem-calc($n*7);
   }
 }
 
 @for $o from -7 to 11 {
   .pl-#{$o*7} {
-    padding-left: rem-calc($o*7);
     padding-left: ($o*7) + px;
+    padding-left: rem-calc($o*7);
   }
 }
 
 @for $p from -7 to 11 {
   .pr-#{$p*7} {
-    padding-right: rem-calc($p*7)!important;
     padding-right: ($p*7) + px !important;
+    padding-right: rem-calc($p*7)!important;
   }
 }
 
 @for $q from -7 to 11 {
   .p-#{$q*7} {
-    padding: rem-calc($q*7)!important;
     padding: ($q*7) + px !important;
+    padding: rem-calc($q*7)!important;
   }
 }
 
@@ -128,10 +135,10 @@
 
 @for $q from 1 to 5 {
   .ph-#{$q*7} {
-    padding-left: rem-calc($q*7)!important;
     padding-left: ($q*7) + px !important;
-    padding-right: rem-calc($q*7)!important;
+    padding-left: rem-calc($q*7)!important;
     padding-right: ($q*7) + px !important;
+    padding-right: rem-calc($q*7)!important;
   }
 }
 
@@ -146,10 +153,10 @@
 
 @for $q from 1 to 5 {
   .pv-#{$q*7} {
-    padding-top: rem-calc($q*7)!important;
     padding-top: ($q*7) + px !important;
-    padding-bottom: rem-calc($q*7)!important;
+    padding-top: rem-calc($q*7)!important;
     padding-bottom: ($q*7) + px !important;
+    padding-bottom: rem-calc($q*7)!important;
   }
 }
 
