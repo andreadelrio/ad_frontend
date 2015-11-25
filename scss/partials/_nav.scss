@@ -13,7 +13,7 @@ nav {
 				padding-right: 14px;
 				li {
 					display: inline-block;
-					padding-top: rem-calc(21);
+					padding-top: rem-calc(14);
 					margin: 0 rem-calc(14);
 				}
 			}
@@ -29,6 +29,24 @@ nav {
 				border-right: 1px solid rgba(0,0,0,0.2);
 			}
 		}
+	}
+	.mobile-menu {
+		height: 0;
+		overflow: hidden;
+		&.active {
+			height: 100%;
+		}
+		background: red;
+		#mobile-trigger {
+
+		}
+	}
+}
+
+body {
+	&.mobile-menu-active {
+		position: fixed;
+		overflow: hidden;
 	}
 }
 

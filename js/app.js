@@ -12,13 +12,40 @@ $(document).foundation();
 		$(".details-box").removeClass('open');
 	});
 
-// $(".row-1").click(function(e){
-// 	$(".details-row-1").toggleClass('open');
-// 	$(".row-2").toggleClass('open');
-// 	$(".row-x").toggleClass('open');
-// 	return false;
-// 	e.preventDefault();
-// });
+	//mobile nav
+  var nav = $('nav');
+  var body = $('body');
+  var mobileTrigger = $('#mobile-trigger');
+  var mobileMenu = $('.mobile-menu');
+	if ($(window).width() <= 736) {
+  	mobileTrigger.click(function(){
+  		mobileMenu.toggleClass("active");
+	    body.toggleClass("mobile-menu-active");
+	    if (mobileMenu.hasClass("active")) {
+	    	nav.css("height", $(window).height());
+	    } else {
+	    	nav.css("height", 49);
+	    };
+	    // if (nav.height() == 49) {
+	    // } else {
+	    // }
+  	});
+	};
+
+	//resize social icons on window resize
+	$(window).resize(function () {
+	  if ($(window).width() <= 736) {
+	    myStickerHeight =  (myPic.height() - skillsList.height()) / 2
+	  }
+	  else {
+	    myStickerHeight =  ((myPic.height() - mySocial.height()) / 2) + 8
+	  }
+	  var myStickers = $('.sticker');
+	  myStickers.each(function(index, item){
+	    $(this).css("height", myStickerHeight);
+	  });
+	});
+	//
 
 $(".fpi-ul li").click(function(e){
 
