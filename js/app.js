@@ -9,6 +9,7 @@ $(document).foundation();
 	$(".ion-close-circled").click(function(){
 		// $(this).parent().removeClass('open');
 		$(".fpi-row").removeClass('down');
+		$("#footer").removeClass('down');
 		$(".details-box").removeClass('open');
 	});
 
@@ -44,12 +45,14 @@ $(document).foundation();
 $(".fpi-ul li").click(function(e){
 
 	$('.fpi-row').removeClass('down');
+	$('#footer').removeClass('down');
 	$(".details-box").removeClass('open');
 	$('.details-box .detail-box').addClass('hidden');
 	$('[data-fpi-details=' + $(this).data("fpi-num") + ']').removeClass("hidden");	
 
 	if(!$(this).parents('.fpi-row').siblings('.fpi-row').hasClass('down')) {
 		$(this).parents('.fpi-row').siblings('.fpi-row').toggleClass('down');
+		$('#footer').toggleClass('down');
 		$(this).parents('.fpi-row').prevAll('.fpi-row').removeClass('down');
 	};
 
