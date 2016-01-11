@@ -1,0 +1,32 @@
+.view-id-multimedia {
+  padding-bottom: 14%;
+  .view-content {
+      border: 2px solid $secondary-color;
+      margin-top: 35px;
+  }
+}
+
+// form
+#multimedia-node-form {
+	padding: 28px;
+	border: 2px solid $secondary-color;
+	margin-bottom: 49px;
+	#edit-field-media-type-und {
+		input {
+			margin: 0;
+		}
+	}
+	a.browse.button {
+		border: 2px solid $secondary-color;
+		background: #fff;
+		color: #000000;
+		padding: 0.4rem 1rem;
+		font-size: 0.8rem;
+		margin-left: -10px;
+		&:hover, &:focus {
+			border: 2px solid $secondary-color;
+			background: #fff;
+			color: #000000;
+		}
+	}
+}

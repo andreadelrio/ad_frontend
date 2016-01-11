@@ -8,3 +8,16 @@
 	}
 	border-bottom: 1px solid $custom-black;
 }
+
+main {
+	padding-top: 10%;
+	min-height: 86vh;
+}
+
+h3.title {
+	display:none;
+}
+
+.br {
+	border-right: 1px solid rgba(0,0,0,0.2);
+}
