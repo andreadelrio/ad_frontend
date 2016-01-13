@@ -26,27 +26,67 @@
 	}
 }
 
-
+// see principle
 .see-principle {
+	padding: 14px;
 	padding: rem-calc(14);
 	border: 2px solid $primary-color;
-	padding: 14px;
 	>div{
 		display: inline-block;
 	}
 }
 
 .views-field-nid {
-	padding-top: rem-calc(14);
-	padding-top: 14px;
+	padding-top: 28px;
+	padding-top: rem-calc(28);
+	padding-bottom: 21px;
+	padding-bottom: rem-calc(21);
+}
+
+.view-see-principle.view-display-id-page {
+	padding-bottom: 49px;
+	padding-bottom: rem-calc(49);
+	.views-row {
+		border: 2px solid $secondary-color;
+		padding: 14px;
+		padding: rem-calc(14);
+		margin-bottom: 14px;
+		margin-bottom: rem-calc(14);
+		.views-field-title-1 {
+			font-weight: bold;
+		}
+		p {
+			margin-bottom: 0.8rem;
+    	margin-top: 0.8rem;
+		}
+	}
+	.view-filters {
+		padding-top: 14px;
+		padding-top: rem-calc(14);
+	}
 }
 
 #edit-submit-see-principle {
-	margin-top: 1.3em;
-	margin-bottom: 0;
 	@include button;
+	margin-bottom: 0;
 	border: 2px solid $secondary-color;
 	background: #fff;
 	color: #000000;
 	padding: 0.35rem 1.3125rem;
+	&:hover {
+		background: #fff;
+	  color: #000000;
+	}
+}
+
+#edit-field-resource-type-tid-wrapper {
+	label, .views-widget {
+		float: left;
+	}
+	label {
+		font-weight: normal;
+		padding: 8px 8px 0 0;
+		font-size: 1rem;
+		padding: rem-calc(8) rem-calc(8) 0 0;
+	}
 }

@@ -44,11 +44,13 @@ $(document).foundation();
 //FPIs grid
 $(".fpi-ul li").click(function(e){
 
+	$('.fpi-ul li div').removeClass('highlight');
 	$('.fpi-row').removeClass('down');
 	$('#footer').removeClass('down');
 	$(".details-box").removeClass('open');
 	$('.details-box .detail-box').addClass('hidden');
 	$('[data-fpi-details=' + $(this).data("fpi-num") + ']').removeClass("hidden");	
+	$('[data-fpi-num=' + $(this).data("fpi-num") + '] div').addClass("highlight");	
 
 	if(!$(this).parents('.fpi-row').siblings('.fpi-row').hasClass('down')) {
 		$(this).parents('.fpi-row').siblings('.fpi-row').toggleClass('down');
@@ -70,3 +72,23 @@ $("#toggle").click(function(){
 	$(this).toggleClass("ion-android-apps");
 	$("#list").toggleClass("hidden");
 });
+
+//FAQ
+$(window).bind("load", function() {
+	$(".row.faq .small-8").each(function(){
+		targetHeight = $(this).height() + 1;
+		console.log(targetHeight);
+		$(this).closest(".row.faq").children(".small-4").css("height",targetHeight);
+	})
+});	
+
+$(window).resize(function () {
+	$(".row.faq .small-8").each(function(){
+		targetHeight = $(this).height() + 1;
+		console.log(targetHeight);
+		$(this).closest(".row.faq").children(".small-4").css("height",targetHeight);
+	})
+});	
+
+
+

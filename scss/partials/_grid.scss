@@ -20,7 +20,7 @@
 				box-sizing: border-box;
 				height: 175px;
 				position: relative;
-				&:hover {
+				&:hover, &.highlight {
 					padding-top: 3px;
 					border: 6px solid $primary-color;
 					.ion-plus-circled {

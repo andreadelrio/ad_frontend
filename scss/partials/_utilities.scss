@@ -104,6 +104,12 @@
   }
 }
 
+@for $n from 1 to 5 {
+  .ptp-#{$n*7} {
+    padding-top: ($n*7) + %;
+  }
+}
+
 @for $o from -7 to 11 {
   .pl-#{$o*7} {
     padding-left: ($o*7) + px;
@@ -208,6 +214,9 @@
   }
   &.sec-color {
     color: $secondary-color;
+  }
+  &.bg {
+    background: lighten($secondary-color, 22%);
   }
 }
 
