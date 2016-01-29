@@ -6,6 +6,12 @@ nav {
 	background: #fff;
 	.row {
 		&.full-width {
+			// h3 {
+			// 	background: lighten($secondary-color, 12%);
+			// 	display: inline-block;
+			// 	margin: rem-calc(7) 0;
+			// 	padding: 0 rem-calc(7);
+			// }
 			ul {
 				margin:0;
 				list-style: none;
@@ -24,6 +30,10 @@ nav {
 				border-left: 1px solid rgba(0,0,0,0.2);
 				padding: rem-calc(7) 0;
 				padding: 7px 0;
+				a {
+					background: lighten($primary-color, 12%);
+					padding: 3px 7px;
+				}
 			}
 			&:nth-last-child(1) {
 				border-right: 1px solid rgba(0,0,0,0.2);
