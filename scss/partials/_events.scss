@@ -31,7 +31,9 @@
 		.row.event {
 			border: 2px solid $secondary-color;
 			padding: rem-calc(14) 0;
-			height: 170px;
+			@media only screen and (min-width: $small-breakpoint) {
+				height: 170px;
+			} 
 		}
 	}
 }

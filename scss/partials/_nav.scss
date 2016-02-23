@@ -4,14 +4,51 @@ nav {
 	width: 100%;
 	z-index:3;
 	background: #fff;
+	//new
+	.left {
+		margin-left: rem-calc(28);
+		border-bottom: 10px solid $yellow;
+		cursor: pointer;
+		height: 77px;
+		width: 166px;
+		&:hover {
+			.ad {
+				margin-top: -2.4em;
+			}
+			.rest-title {
+				display: block;
+			}
+		}
+		.ad {
+			text-transform: uppercase;
+			font-family: 'Montserrat', sans-serif;
+			font-weight: 700;
+			font-size: 1.4rem;
+			transition: all 0.3s;
+			line-height: 1.1;
+			padding-top: rem-calc(7);
+		}
+		.rest-title {
+			padding-top: rem-calc(7);
+			transition: all 0.3s;
+			display: none;
+		}
+	}
+	.right {
+		padding-right: rem-calc(28);
+		ul {
+			padding-top: rem-calc(14);
+			list-style: none;
+			margin: 0;
+			li {
+				float: left;
+				margin: rem-calc(14);
+			}
+		}
+	}
+	//new
 	.row {
 		&.full-width {
-			// h3 {
-			// 	background: lighten($secondary-color, 12%);
-			// 	display: inline-block;
-			// 	margin: rem-calc(7) 0;
-			// 	padding: 0 rem-calc(7);
-			// }
 			ul {
 				margin:0;
 				list-style: none;
@@ -24,20 +61,6 @@ nav {
 				}
 			}
 			border-bottom: 1px solid rgba(0,0,0,0.2);
-		}
-		&.items {
-			.medium-3 {
-				border-left: 1px solid rgba(0,0,0,0.2);
-				padding: rem-calc(7) 0;
-				padding: 7px 0;
-				a {
-					background: lighten($primary-color, 12%);
-					padding: 3px 7px;
-				}
-			}
-			&:nth-last-child(1) {
-				border-right: 1px solid rgba(0,0,0,0.2);
-			}
 		}
 	}
 	.mobile-menu {
@@ -76,7 +99,7 @@ body {
 		    top: 24%;
 		    transform: translateY(-50%);
 			}
-			display: inline-block !important;
+			display: inline-block;
 			&.cta {
 				height: 42px;
 				border: 2px solid $secondary-color;
@@ -86,6 +109,11 @@ body {
 		  	i {
 		  		padding-left: 3px;
 		  	}
+		  	&.download {
+		  		@media only screen and (max-width: $small-breakpoint) {
+		  			display: none;
+		  		} 
+		  	}
 			}
 			#toggle {
 				cursor: pointer;
@@ -93,7 +121,7 @@ body {
 		}
 	}
 	select {
-		width: 100px;
+		width: 100px !important;
 		height: 42px;
 	  -webkit-appearance: none;
 	  -moz-appearance: none;

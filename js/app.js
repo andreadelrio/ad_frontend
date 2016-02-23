@@ -1,11 +1,5 @@
 $(document).foundation();
 
- // $(".fpi-row li").click(function(){
- // 	// $('[data-pri-details=' + $(this).data("pri-num") + ']').siblings().addClass("hidden");	
- // 	$('.details-box').addClass('hidden');
- // 	$('[data-fpi-details=' + $(this).data("fpi-num") + ']').toggleClass("hidden");	
- // });
-
 	$(".ion-close-circled").click(function(){
 		// $(this).parent().removeClass('open');
 		$(".fpi-row").removeClass('down');

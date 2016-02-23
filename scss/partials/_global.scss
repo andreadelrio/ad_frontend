@@ -12,6 +12,9 @@
 main {
 	padding-top: 10%;
 	min-height: 86vh;
+	@media only screen and (max-width: $small-breakpoint) {
+		padding-top: 14%;
+	} 
 }
 
 h3.title {
