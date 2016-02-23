@@ -11,12 +11,10 @@ nav {
 		cursor: pointer;
 		height: 77px;
 		width: 166px;
+		overflow: hidden;
 		&:hover {
 			.ad {
 				margin-top: -2.4em;
-			}
-			.rest-title {
-				display: block;
 			}
 		}
 		.ad {
@@ -31,7 +29,6 @@ nav {
 		.rest-title {
 			padding-top: rem-calc(7);
 			transition: all 0.3s;
-			display: none;
 		}
 	}
 	.right {
