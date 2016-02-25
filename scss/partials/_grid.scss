@@ -13,18 +13,19 @@
 		}
 		ul.fpi-ul li {
 			>div {
-				// background-image: url("../assets/img/openness.png");
-				// background-repeat: no-repeat;
-				// background-size: contain;
-				// background-position: center; 
-				h4 {
-					@include text-v;
+				img {
+					width: 160px;
+				}
+				h5 {
+					position: relative;
+					top: 14%;
+					transform: translateY(-50%);
 				}
 				cursor: pointer;
-				padding: 7px;
+				padding: rem-calc(14) rem-calc(7) rem-calc(7) rem-calc(7);
 				border: 2px solid $primary-color;
 				box-sizing: border-box;
-				height: 175px;
+				height: 240px;
 				position: relative;
 				&:hover, &.highlight {
 					padding-top: 3px;
@@ -54,7 +55,7 @@
 			position: absolute;
 			height: 310px;
 			width: 100%;
-			top: 210px;
+			margin-top: 21px;
 			opacity: 0;
 			&.open {
 				opacity: 1;
