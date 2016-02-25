@@ -5,12 +5,18 @@
 		position:relative;
 		z-index:2;
 		transition: transform .54s cubic-bezier(.5,0,.1,1) 0s;
+		padding-bottom: rem-calc(14);
 		&.down {
-			transform: translate3d(0,320px,0);	
+			transform: translate3d(0,360px,0);	
+			// transform: translate3d(0,320px,0);	
 			z-index:1;
 		}
 		ul.fpi-ul li {
 			>div {
+				// background-image: url("../assets/img/openness.png");
+				// background-repeat: no-repeat;
+				// background-size: contain;
+				// background-position: center; 
 				h4 {
 					@include text-v;
 				}
@@ -46,9 +52,9 @@
 		}
 		.details-box {
 			position: absolute;
-			height: 294px;
+			height: 310px;
 			width: 100%;
-			top: 200px;
+			top: 210px;
 			opacity: 0;
 			&.open {
 				opacity: 1;
@@ -58,7 +64,7 @@
 				z-index:1;
 				position: relative;
 				.ctas-grid {
-					height: 250px;
+					height: 270px;
 					a.custom-button {
 						@include text-v;
 					}	
@@ -81,11 +87,11 @@
 		}
 		.row .full-text {
 			background: #fff;
-			height: 250px;
+			height: 270px;
 			position: relative;
 			text-align: justify;
 			transform-style: preserve-3d;
-			h5 {
+			p {
 				@include text-v;
 			}
 			i {

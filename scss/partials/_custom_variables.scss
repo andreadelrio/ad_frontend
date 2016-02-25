@@ -1,8 +1,9 @@
-$primary-color: #FF8B64;
-$secondary-color: #75CACA;
-$custom-black: #4C4C4C;
 $yellow: #fff651;
 $green: #2cc376;
+$red: #fb6066;
+$primary-color: #FF8B64;
+$secondary-color: $green;
+$custom-black: #4C4C4C;
 
 .hidden {
 	display: none;

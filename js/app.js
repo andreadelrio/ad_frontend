@@ -1,10 +1,10 @@
 $(document).foundation();
 
 	$(".ion-close-circled").click(function(){
-		// $(this).parent().removeClass('open');
 		$(".fpi-row").removeClass('down');
 		$("#footer").removeClass('down');
 		$(".details-box").removeClass('open');
+    $('.fpi-ul li div').removeClass('highlight');
 	});
 
 	//mobile nav
@@ -71,7 +71,6 @@ $("#toggle").click(function(){
 $(window).bind("load", function() {
 	$(".row.faq .small-8").each(function(){
 		targetHeight = $(this).height() + 1;
-		console.log(targetHeight);
 		$(this).closest(".row.faq").children(".small-4").css("height",targetHeight);
 	})
 });	
@@ -79,7 +78,6 @@ $(window).bind("load", function() {
 $(window).resize(function () {
 	$(".row.faq .small-8").each(function(){
 		targetHeight = $(this).height() + 1;
-		console.log(targetHeight);
 		$(this).closest(".row.faq").children(".small-4").css("height",targetHeight);
 	})
 });	
