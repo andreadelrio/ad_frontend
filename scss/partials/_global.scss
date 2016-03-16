@@ -37,3 +37,15 @@ h3.title {
 	font-family: 'Montserrat';
 	text-transform: uppercase;
 }
+
+.not-logged-in {
+	ul.button-group {
+		display: none;
+	}
+}
+
+i.bold-icon {
+	&:before {
+		font-weight: bold;
+	}
+}

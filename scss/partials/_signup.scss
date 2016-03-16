@@ -1,0 +1,11 @@
+form#user-register-form {
+	border: 2px solid $secondary-color;
+	padding: rem-calc(21) rem-calc(42);
+	margin-bottom: rem-calc(35);
+	button.radius.secondary {
+		background: none;
+		border-radius: 0;
+    border: 2px solid $secondary-color;
+    padding: rem-calc(7) rem-calc(14);
+	}
+}

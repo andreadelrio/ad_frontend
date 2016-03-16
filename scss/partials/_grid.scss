@@ -8,7 +8,6 @@
 		padding-bottom: rem-calc(14);
 		&.down {
 			transform: translate3d(0,360px,0);	
-			// transform: translate3d(0,320px,0);	
 			z-index:1;
 		}
 		ul.fpi-ul li {
@@ -65,9 +64,14 @@
 				z-index:1;
 				position: relative;
 				.ctas-grid {
-					height: 270px;
-					a.custom-button {
+					height: 220px;
+					a {
 						@include text-v;
+						display: block;
+						i {
+							color: $secondary-color;
+							vertical-align: middle;
+						}
 					}	
 				}
 			}

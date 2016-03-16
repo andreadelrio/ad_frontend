@@ -67,20 +67,5 @@ $("#toggle").click(function(){
 	$("#list").toggleClass("hidden");
 });
 
-//FAQ
-$(window).bind("load", function() {
-	$(".row.faq .small-8").each(function(){
-		targetHeight = $(this).height() + 1;
-		$(this).closest(".row.faq").children(".small-4").css("height",targetHeight);
-	})
-});	
-
-$(window).resize(function () {
-	$(".row.faq .small-8").each(function(){
-		targetHeight = $(this).height() + 1;
-		$(this).closest(".row.faq").children(".small-4").css("height",targetHeight);
-	})
-});	
-
 
 
